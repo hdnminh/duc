@@ -1,0 +1,14 @@
+2025-05-15 13:14:30,790 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 13:14:30,790 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='cảnh biển với hoàng hôn đẹp', num=1, guidance=7.5, steps=50, height=512, width=512, seed=None, output='outputs')
+2025-05-15 13:14:30,790 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 13:14:31,580 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 13:14:31,580 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ CompVis/stable-diffusion-v1-4...
+2025-05-15 13:14:36,527 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 13:14:36,528 - StableDiffusionPipeline - INFO - Chế độ: Tạo một ảnh duy nhất
+2025-05-15 13:14:36,528 - StableDiffusionPipeline - INFO - Bắt đầu sinh ảnh với prompt: 'cảnh biển với hoàng hôn đẹp'
+2025-05-15 13:14:36,528 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=7.5, steps=50, kích thước=512x512
+2025-05-15 13:14:36,528 - StableDiffusionPipeline - INFO - Sử dụng seed ngẫu nhiên
+2025-05-15 13:14:36,528 - StableDiffusionPipeline - INFO - Đang thực hiện quá trình sinh ảnh...
+2025-05-15 13:14:38,273 - StableDiffusionPipeline - INFO - Đã sinh ảnh thành công
+2025-05-15 13:14:38,354 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_g7.5_s50.png
+2025-05-15 13:14:38,361 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
