@@ -1,0 +1,7 @@
+Thời gian: 2025-05-15 16:25:20
+Prompt: future city with many people are walking
+Kích thước: 512x512
+Guidance scale: 10.0
+Số bước: 50
+Seed: None
+File đầu ra: custom-outputs/custom_output_future_city_with_many_people_a_g10.0_s50.png

@@ -1,0 +1,296 @@
+2025-05-15 13:14:30,790 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 13:14:30,790 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='cảnh biển với hoàng hôn đẹp', num=1, guidance=7.5, steps=50, height=512, width=512, seed=None, output='outputs')
+2025-05-15 13:14:30,790 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 13:14:31,580 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 13:14:31,580 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ CompVis/stable-diffusion-v1-4...
+2025-05-15 13:14:36,527 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 13:14:36,528 - StableDiffusionPipeline - INFO - Chế độ: Tạo một ảnh duy nhất
+2025-05-15 13:14:36,528 - StableDiffusionPipeline - INFO - Bắt đầu sinh ảnh với prompt: 'cảnh biển với hoàng hôn đẹp'
+2025-05-15 13:14:36,528 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=7.5, steps=50, kích thước=512x512
+2025-05-15 13:14:36,528 - StableDiffusionPipeline - INFO - Sử dụng seed ngẫu nhiên
+2025-05-15 13:14:36,528 - StableDiffusionPipeline - INFO - Đang thực hiện quá trình sinh ảnh...
+2025-05-15 13:14:38,273 - StableDiffusionPipeline - INFO - Đã sinh ảnh thành công
+2025-05-15 13:14:38,354 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_g7.5_s50.png
+2025-05-15 13:14:38,361 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!2025-05-15 15:58:13,337 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 15:58:13,338 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='cảnh biển với hoàng hôn đẹp', num=1, guidance=7.5, steps=50, height=512, width=512, seed=None, output='outputs')
+2025-05-15 15:58:13,338 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 15:58:13,592 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 15:58:13,592 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ runwayml/stable-diffusion-v1-5...
+2025-05-15 15:59:08,863 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 15:59:08,864 - StableDiffusionPipeline - INFO - Chế độ: Tạo một ảnh duy nhất
+2025-05-15 15:59:08,864 - StableDiffusionPipeline - INFO - Bắt đầu sinh ảnh với prompt: 'cảnh biển với hoàng hôn đẹp'
+2025-05-15 15:59:08,864 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=7.5, steps=50, kích thước=512x512
+2025-05-15 15:59:08,864 - StableDiffusionPipeline - INFO - Sử dụng seed ngẫu nhiên
+2025-05-15 15:59:08,864 - StableDiffusionPipeline - INFO - Đang thực hiện quá trình sinh ảnh...
+2025-05-15 15:59:11,326 - StableDiffusionPipeline - INFO - Đã sinh ảnh thành công
+2025-05-15 15:59:11,327 - StableDiffusionPipeline - INFO - Đã tạo thư mục đầu ra: outputs
+2025-05-15 15:59:11,445 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_g7.5_s50.png
+2025-05-15 15:59:11,455 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+2025-05-15 15:59:56,357 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 15:59:56,358 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='Tom is catching Jerry', num=1, guidance=7.5, steps=50, height=512, width=512, seed=None, output='outputs')
+2025-05-15 15:59:56,358 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 15:59:56,604 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 15:59:56,605 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ runwayml/stable-diffusion-v1-5...
+2025-05-15 16:00:00,830 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 16:00:00,830 - StableDiffusionPipeline - INFO - Chế độ: Tạo một ảnh duy nhất
+2025-05-15 16:00:00,830 - StableDiffusionPipeline - INFO - Bắt đầu sinh ảnh với prompt: 'Tom is catching Jerry'
+2025-05-15 16:00:00,830 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=7.5, steps=50, kích thước=512x512
+2025-05-15 16:00:00,830 - StableDiffusionPipeline - INFO - Sử dụng seed ngẫu nhiên
+2025-05-15 16:00:00,830 - StableDiffusionPipeline - INFO - Đang thực hiện quá trình sinh ảnh...
+2025-05-15 16:00:03,297 - StableDiffusionPipeline - INFO - Đã sinh ảnh thành công
+2025-05-15 16:00:03,448 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_g7.5_s50.png
+2025-05-15 16:00:03,462 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+2025-05-15 16:01:19,924 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 16:01:19,924 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='Tom is catching Jerry in small beautifull house', num=2, guidance=7.5, steps=50, height=512, width=512, seed=None, output='outputs')
+2025-05-15 16:01:19,925 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 16:01:20,219 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 16:01:20,219 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ runwayml/stable-diffusion-v1-5...
+2025-05-15 16:01:23,765 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 16:01:23,766 - StableDiffusionPipeline - INFO - Chế độ: Tạo 2 ảnh
+2025-05-15 16:01:23,766 - StableDiffusionPipeline - INFO - Bắt đầu sinh 2 ảnh với prompt: 'Tom is catching Jerry in small beautifull house'
+2025-05-15 16:01:23,766 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=7.5, steps=50, kích thước=512x512
+2025-05-15 16:01:23,766 - StableDiffusionPipeline - INFO - Đang sinh 2 ảnh cùng lúc...
+2025-05-15 16:01:26,965 - StableDiffusionPipeline - INFO - Đã sinh 2 ảnh thành công
+2025-05-15 16:01:26,965 - StableDiffusionPipeline - INFO - Lưu từng ảnh riêng lẻ
+2025-05-15 16:01:27,057 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_1_g7.5_s50.png
+2025-05-15 16:01:27,113 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_2_g7.5_s50.png
+2025-05-15 16:01:27,113 - StableDiffusionPipeline - INFO - Tạo lưới ảnh từ 2 ảnh
+2025-05-15 16:01:27,113 - StableDiffusionPipeline - INFO - Đã tạo lưới ảnh với 1 hàng và 2 cột
+2025-05-15 16:01:27,238 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_grid_g7.5_s50.png
+2025-05-15 16:01:27,249 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+2025-05-15 16:02:01,814 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 16:02:01,815 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='Tom is catching Jerry in small beautifull house', num=2, guidance=15.0, steps=50, height=512, width=512, seed=None, output='outputs')
+2025-05-15 16:02:01,815 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 16:02:02,063 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 16:02:02,063 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ runwayml/stable-diffusion-v1-5...
+2025-05-15 16:02:05,473 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 16:02:05,473 - StableDiffusionPipeline - INFO - Chế độ: Tạo 2 ảnh
+2025-05-15 16:02:05,473 - StableDiffusionPipeline - INFO - Bắt đầu sinh 2 ảnh với prompt: 'Tom is catching Jerry in small beautifull house'
+2025-05-15 16:02:05,473 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=15.0, steps=50, kích thước=512x512
+2025-05-15 16:02:05,473 - StableDiffusionPipeline - INFO - Đang sinh 2 ảnh cùng lúc...
+2025-05-15 16:02:09,374 - StableDiffusionPipeline - INFO - Đã sinh 2 ảnh thành công
+2025-05-15 16:02:09,374 - StableDiffusionPipeline - INFO - Lưu từng ảnh riêng lẻ
+2025-05-15 16:02:09,385 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_1_g15.0_s50.png
+2025-05-15 16:02:09,475 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_2_g15.0_s50.png
+2025-05-15 16:02:09,475 - StableDiffusionPipeline - INFO - Tạo lưới ảnh từ 2 ảnh
+2025-05-15 16:02:09,476 - StableDiffusionPipeline - INFO - Đã tạo lưới ảnh với 1 hàng và 2 cột
+2025-05-15 16:02:09,547 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_grid_g15.0_s50.png
+2025-05-15 16:02:09,575 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+2025-05-15 16:02:58,881 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 16:02:58,882 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='A beautiful beach', num=2, guidance=15.0, steps=50, height=512, width=512, seed=None, output='outputs')
+2025-05-15 16:02:58,882 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 16:02:59,123 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 16:02:59,123 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ runwayml/stable-diffusion-v1-5...
+2025-05-15 16:03:02,324 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 16:03:02,325 - StableDiffusionPipeline - INFO - Chế độ: Tạo 2 ảnh
+2025-05-15 16:03:02,325 - StableDiffusionPipeline - INFO - Bắt đầu sinh 2 ảnh với prompt: 'A beautiful beach'
+2025-05-15 16:03:02,325 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=15.0, steps=50, kích thước=512x512
+2025-05-15 16:03:02,325 - StableDiffusionPipeline - INFO - Đang sinh 2 ảnh cùng lúc...
+2025-05-15 16:03:05,652 - StableDiffusionPipeline - INFO - Đã sinh 2 ảnh thành công
+2025-05-15 16:03:05,652 - StableDiffusionPipeline - INFO - Lưu từng ảnh riêng lẻ
+2025-05-15 16:03:05,757 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_1_g15.0_s50.png
+2025-05-15 16:03:05,842 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_2_g15.0_s50.png
+2025-05-15 16:03:05,842 - StableDiffusionPipeline - INFO - Tạo lưới ảnh từ 2 ảnh
+2025-05-15 16:03:05,843 - StableDiffusionPipeline - INFO - Đã tạo lưới ảnh với 1 hàng và 2 cột
+2025-05-15 16:03:06,034 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_grid_g15.0_s50.png
+2025-05-15 16:03:06,045 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+2025-05-15 16:05:15,313 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 16:05:15,314 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='A beautiful beach', num=2, guidance=15.0, steps=50, height=512, width=512, seed=None, output='outputs')
+2025-05-15 16:05:15,314 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 16:05:15,590 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 16:05:15,590 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ runwayml/stable-diffusion-v1-5...
+2025-05-15 16:05:19,337 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 16:05:19,337 - StableDiffusionPipeline - INFO - Chế độ: Tạo 2 ảnh
+2025-05-15 16:05:19,338 - StableDiffusionPipeline - INFO - Bắt đầu sinh 2 ảnh với prompt: 'A beautiful beach'
+2025-05-15 16:05:19,338 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=15.0, steps=50, kích thước=512x512
+2025-05-15 16:05:19,338 - StableDiffusionPipeline - INFO - Đang sinh 2 ảnh cùng lúc...
+2025-05-15 16:05:22,672 - StableDiffusionPipeline - INFO - Đã sinh 2 ảnh thành công
+2025-05-15 16:05:22,673 - StableDiffusionPipeline - INFO - Lưu từng ảnh riêng lẻ
+2025-05-15 16:05:22,771 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_1_A_beautiful_beach_g15.0_s50.png
+2025-05-15 16:05:22,842 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_2_A_beautiful_beach_g15.0_s50.png
+2025-05-15 16:05:22,842 - StableDiffusionPipeline - INFO - Tạo lưới ảnh từ 2 ảnh
+2025-05-15 16:05:22,845 - StableDiffusionPipeline - INFO - Đã tạo lưới ảnh với 1 hàng và 2 cột
+2025-05-15 16:05:23,014 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_grid_A_beautiful_beach_g15.0_s50.png
+2025-05-15 16:05:23,024 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+2025-05-15 16:06:24,175 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 16:06:24,176 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='A beautiful beach', num=1, guidance=15.0, steps=50, height=512, width=512, seed=None, output='outputs')
+2025-05-15 16:06:24,176 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 16:06:24,475 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 16:06:24,475 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ runwayml/stable-diffusion-v1-5...
+2025-05-15 16:06:28,195 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 16:06:28,196 - StableDiffusionPipeline - INFO - Chế độ: Tạo một ảnh duy nhất
+2025-05-15 16:06:28,196 - StableDiffusionPipeline - INFO - Bắt đầu sinh ảnh với prompt: 'A beautiful beach'
+2025-05-15 16:06:28,196 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=15.0, steps=50, kích thước=512x512
+2025-05-15 16:06:28,196 - StableDiffusionPipeline - INFO - Sử dụng seed ngẫu nhiên
+2025-05-15 16:06:28,196 - StableDiffusionPipeline - INFO - Đang thực hiện quá trình sinh ảnh...
+2025-05-15 16:06:30,531 - StableDiffusionPipeline - INFO - Đã sinh ảnh thành công
+2025-05-15 16:06:30,618 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_A_beautiful_beach_g15.0_s50.png
+2025-05-15 16:06:30,633 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+2025-05-15 16:06:53,718 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 16:06:53,719 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='A beautiful beach', num=1, guidance=15.0, steps=55, height=512, width=512, seed=None, output='outputs')
+2025-05-15 16:06:53,719 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 16:06:54,047 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 16:06:54,048 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ runwayml/stable-diffusion-v1-5...
+2025-05-15 16:06:59,090 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 16:06:59,091 - StableDiffusionPipeline - INFO - Chế độ: Tạo một ảnh duy nhất
+2025-05-15 16:06:59,091 - StableDiffusionPipeline - INFO - Bắt đầu sinh ảnh với prompt: 'A beautiful beach'
+2025-05-15 16:06:59,091 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=15.0, steps=55, kích thước=512x512
+2025-05-15 16:06:59,091 - StableDiffusionPipeline - INFO - Sử dụng seed ngẫu nhiên
+2025-05-15 16:06:59,091 - StableDiffusionPipeline - INFO - Đang thực hiện quá trình sinh ảnh...
+2025-05-15 16:07:03,225 - StableDiffusionPipeline - INFO - Đã sinh ảnh thành công
+2025-05-15 16:07:03,320 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_A_beautiful_beach_g15.0_s55.png
+2025-05-15 16:07:03,335 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+2025-05-15 16:07:25,834 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 16:07:25,836 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='A beautiful beach', num=1, guidance=8.0, steps=55, height=512, width=512, seed=None, output='outputs')
+2025-05-15 16:07:25,836 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 16:07:26,321 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 16:07:26,322 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ runwayml/stable-diffusion-v1-5...
+2025-05-15 16:07:31,655 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 16:07:31,655 - StableDiffusionPipeline - INFO - Chế độ: Tạo một ảnh duy nhất
+2025-05-15 16:07:31,655 - StableDiffusionPipeline - INFO - Bắt đầu sinh ảnh với prompt: 'A beautiful beach'
+2025-05-15 16:07:31,655 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=8.0, steps=55, kích thước=512x512
+2025-05-15 16:07:31,655 - StableDiffusionPipeline - INFO - Sử dụng seed ngẫu nhiên
+2025-05-15 16:07:31,655 - StableDiffusionPipeline - INFO - Đang thực hiện quá trình sinh ảnh...
+2025-05-15 16:07:35,915 - StableDiffusionPipeline - INFO - Đã sinh ảnh thành công
+2025-05-15 16:07:36,013 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_A_beautiful_beach_g8.0_s55.png
+2025-05-15 16:07:36,056 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+2025-05-15 16:08:09,808 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 16:08:09,808 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='A beautiful beach', num=1, guidance=1.0, steps=55, height=512, width=512, seed=None, output='outputs')
+2025-05-15 16:08:09,808 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 16:08:10,094 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 16:08:10,094 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ runwayml/stable-diffusion-v1-5...
+2025-05-15 16:08:14,805 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 16:08:14,805 - StableDiffusionPipeline - INFO - Chế độ: Tạo một ảnh duy nhất
+2025-05-15 16:08:14,805 - StableDiffusionPipeline - INFO - Bắt đầu sinh ảnh với prompt: 'A beautiful beach'
+2025-05-15 16:08:14,805 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=1.0, steps=55, kích thước=512x512
+2025-05-15 16:08:14,805 - StableDiffusionPipeline - INFO - Sử dụng seed ngẫu nhiên
+2025-05-15 16:08:14,806 - StableDiffusionPipeline - INFO - Đang thực hiện quá trình sinh ảnh...
+2025-05-15 16:08:18,124 - StableDiffusionPipeline - INFO - Đã sinh ảnh thành công
+2025-05-15 16:08:18,203 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_A_beautiful_beach_g1.0_s55.png
+2025-05-15 16:08:18,233 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+2025-05-15 16:08:36,133 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 16:08:36,134 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='A beautiful beach', num=1, guidance=20.0, steps=55, height=512, width=512, seed=None, output='outputs')
+2025-05-15 16:08:36,134 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 16:08:36,419 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 16:08:36,419 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ runwayml/stable-diffusion-v1-5...
+2025-05-15 16:08:40,807 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 16:08:40,807 - StableDiffusionPipeline - INFO - Chế độ: Tạo một ảnh duy nhất
+2025-05-15 16:08:40,807 - StableDiffusionPipeline - INFO - Bắt đầu sinh ảnh với prompt: 'A beautiful beach'
+2025-05-15 16:08:40,807 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=20.0, steps=55, kích thước=512x512
+2025-05-15 16:08:40,807 - StableDiffusionPipeline - INFO - Sử dụng seed ngẫu nhiên
+2025-05-15 16:08:40,807 - StableDiffusionPipeline - INFO - Đang thực hiện quá trình sinh ảnh...
+2025-05-15 16:08:43,494 - StableDiffusionPipeline - INFO - Đã sinh ảnh thành công
+2025-05-15 16:08:43,582 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_A_beautiful_beach_g20.0_s55.png
+2025-05-15 16:08:43,614 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+2025-05-15 16:09:20,383 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 16:09:20,384 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='A running kute anime dog', num=1, guidance=20.0, steps=55, height=512, width=512, seed=None, output='outputs')
+2025-05-15 16:09:20,384 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 16:09:20,669 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 16:09:20,669 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ runwayml/stable-diffusion-v1-5...
+2025-05-15 16:09:24,088 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 16:09:24,088 - StableDiffusionPipeline - INFO - Chế độ: Tạo một ảnh duy nhất
+2025-05-15 16:09:24,088 - StableDiffusionPipeline - INFO - Bắt đầu sinh ảnh với prompt: 'A running kute anime dog'
+2025-05-15 16:09:24,088 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=20.0, steps=55, kích thước=512x512
+2025-05-15 16:09:24,088 - StableDiffusionPipeline - INFO - Sử dụng seed ngẫu nhiên
+2025-05-15 16:09:24,088 - StableDiffusionPipeline - INFO - Đang thực hiện quá trình sinh ảnh...
+2025-05-15 16:09:26,678 - StableDiffusionPipeline - INFO - Đã sinh ảnh thành công
+2025-05-15 16:09:26,795 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_A_running_kute_anime_dog_g20.0_s55.png
+2025-05-15 16:09:26,818 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+2025-05-15 16:09:49,290 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 16:09:49,291 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='A running kute anime dog', num=1, guidance=10.0, steps=55, height=512, width=512, seed=None, output='outputs')
+2025-05-15 16:09:49,291 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 16:09:49,568 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 16:09:49,569 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ runwayml/stable-diffusion-v1-5...
+2025-05-15 16:09:53,156 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 16:09:53,156 - StableDiffusionPipeline - INFO - Chế độ: Tạo một ảnh duy nhất
+2025-05-15 16:09:53,156 - StableDiffusionPipeline - INFO - Bắt đầu sinh ảnh với prompt: 'A running kute anime dog'
+2025-05-15 16:09:53,156 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=10.0, steps=55, kích thước=512x512
+2025-05-15 16:09:53,156 - StableDiffusionPipeline - INFO - Sử dụng seed ngẫu nhiên
+2025-05-15 16:09:53,156 - StableDiffusionPipeline - INFO - Đang thực hiện quá trình sinh ảnh...
+2025-05-15 16:09:55,736 - StableDiffusionPipeline - INFO - Đã sinh ảnh thành công
+2025-05-15 16:09:55,872 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_A_running_kute_anime_dog_g10.0_s55.png
+2025-05-15 16:09:55,903 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+2025-05-15 16:10:17,511 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 16:10:17,512 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='A running kute black anime dog', num=1, guidance=10.0, steps=55, height=512, width=512, seed=None, output='outputs')
+2025-05-15 16:10:17,512 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 16:10:17,756 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 16:10:17,756 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ runwayml/stable-diffusion-v1-5...
+2025-05-15 16:10:21,397 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 16:10:21,397 - StableDiffusionPipeline - INFO - Chế độ: Tạo một ảnh duy nhất
+2025-05-15 16:10:21,397 - StableDiffusionPipeline - INFO - Bắt đầu sinh ảnh với prompt: 'A running kute black anime dog'
+2025-05-15 16:10:21,397 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=10.0, steps=55, kích thước=512x512
+2025-05-15 16:10:21,397 - StableDiffusionPipeline - INFO - Sử dụng seed ngẫu nhiên
+2025-05-15 16:10:21,397 - StableDiffusionPipeline - INFO - Đang thực hiện quá trình sinh ảnh...
+2025-05-15 16:10:23,903 - StableDiffusionPipeline - INFO - Đã sinh ảnh thành công
+2025-05-15 16:10:24,007 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_A_running_kute_black_anime_dog_g10.0_s55.png
+2025-05-15 16:10:24,035 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+2025-05-15 16:10:41,450 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 16:10:41,451 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='A running kute black anime dog', num=1, guidance=40.0, steps=55, height=512, width=512, seed=None, output='outputs')
+2025-05-15 16:10:41,451 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 16:10:41,691 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 16:10:41,691 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ runwayml/stable-diffusion-v1-5...
+2025-05-15 16:10:44,987 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 16:10:44,987 - StableDiffusionPipeline - INFO - Chế độ: Tạo một ảnh duy nhất
+2025-05-15 16:10:44,987 - StableDiffusionPipeline - INFO - Bắt đầu sinh ảnh với prompt: 'A running kute black anime dog'
+2025-05-15 16:10:44,987 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=40.0, steps=55, kích thước=512x512
+2025-05-15 16:10:44,987 - StableDiffusionPipeline - INFO - Sử dụng seed ngẫu nhiên
+2025-05-15 16:10:44,987 - StableDiffusionPipeline - INFO - Đang thực hiện quá trình sinh ảnh...
+2025-05-15 16:10:47,625 - StableDiffusionPipeline - INFO - Đã sinh ảnh thành công
+2025-05-15 16:10:47,702 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_A_running_kute_black_anime_dog_g40.0_s55.png
+2025-05-15 16:10:47,713 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+2025-05-15 16:11:34,638 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 16:11:34,639 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='Sun lights on the sea', num=1, guidance=7.0, steps=55, height=512, width=512, seed=None, output='outputs')
+2025-05-15 16:11:34,639 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 16:11:34,883 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 16:11:34,884 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ runwayml/stable-diffusion-v1-5...
+2025-05-15 16:11:38,381 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 16:11:38,381 - StableDiffusionPipeline - INFO - Chế độ: Tạo một ảnh duy nhất
+2025-05-15 16:11:38,381 - StableDiffusionPipeline - INFO - Bắt đầu sinh ảnh với prompt: 'Sun lights on the sea'
+2025-05-15 16:11:38,381 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=7.0, steps=55, kích thước=512x512
+2025-05-15 16:11:38,381 - StableDiffusionPipeline - INFO - Sử dụng seed ngẫu nhiên
+2025-05-15 16:11:38,381 - StableDiffusionPipeline - INFO - Đang thực hiện quá trình sinh ảnh...
+2025-05-15 16:11:40,984 - StableDiffusionPipeline - INFO - Đã sinh ảnh thành công
+2025-05-15 16:11:41,077 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_Sun_lights_on_the_sea_g7.0_s55.png
+2025-05-15 16:11:41,086 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+2025-05-15 16:12:00,815 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 16:12:00,817 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='Sun lights on the sea', num=1, guidance=15.0, steps=55, height=512, width=512, seed=None, output='outputs')
+2025-05-15 16:12:00,817 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 16:12:01,095 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 16:12:01,095 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ runwayml/stable-diffusion-v1-5...
+2025-05-15 16:12:04,810 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 16:12:04,811 - StableDiffusionPipeline - INFO - Chế độ: Tạo một ảnh duy nhất
+2025-05-15 16:12:04,811 - StableDiffusionPipeline - INFO - Bắt đầu sinh ảnh với prompt: 'Sun lights on the sea'
+2025-05-15 16:12:04,811 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=15.0, steps=55, kích thước=512x512
+2025-05-15 16:12:04,811 - StableDiffusionPipeline - INFO - Sử dụng seed ngẫu nhiên
+2025-05-15 16:12:04,811 - StableDiffusionPipeline - INFO - Đang thực hiện quá trình sinh ảnh...
+2025-05-15 16:12:09,819 - StableDiffusionPipeline - INFO - Đã sinh ảnh thành công
+2025-05-15 16:12:09,921 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_Sun_lights_on_the_sea_g15.0_s55.png
+2025-05-15 16:12:09,936 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+2025-05-15 16:13:22,201 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 16:13:22,202 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='Forest', num=1, guidance=15.0, steps=55, height=512, width=512, seed=None, output='outputs')
+2025-05-15 16:13:22,202 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 16:13:22,531 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 16:13:22,532 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ runwayml/stable-diffusion-v1-5...
+2025-05-15 16:13:25,999 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 16:13:25,999 - StableDiffusionPipeline - INFO - Chế độ: Tạo một ảnh duy nhất
+2025-05-15 16:13:25,999 - StableDiffusionPipeline - INFO - Bắt đầu sinh ảnh với prompt: 'Forest'
+2025-05-15 16:13:25,999 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=15.0, steps=55, kích thước=512x512
+2025-05-15 16:13:25,999 - StableDiffusionPipeline - INFO - Sử dụng seed ngẫu nhiên
+2025-05-15 16:13:25,999 - StableDiffusionPipeline - INFO - Đang thực hiện quá trình sinh ảnh...
+2025-05-15 16:13:28,543 - StableDiffusionPipeline - INFO - Đã sinh ảnh thành công
+2025-05-15 16:13:28,643 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_Forest_g15.0_s55.png
+2025-05-15 16:13:28,652 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+2025-05-15 16:14:01,063 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
+2025-05-15 16:14:01,064 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='A real beautiful Forest', num=1, guidance=10.0, steps=55, height=512, width=512, seed=None, output='outputs')
+2025-05-15 16:14:01,064 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
+2025-05-15 16:14:01,441 - StableDiffusionPipeline - INFO - Sử dụng CUDA với dtype float16
+2025-05-15 16:14:01,441 - StableDiffusionPipeline - INFO - Tải StableDiffusionPipeline từ runwayml/stable-diffusion-v1-5...
+2025-05-15 16:14:08,540 - StableDiffusionPipeline - INFO - Đã tải pipeline và chuyển đến thiết bị cuda
+2025-05-15 16:14:08,541 - StableDiffusionPipeline - INFO - Chế độ: Tạo một ảnh duy nhất
+2025-05-15 16:14:08,541 - StableDiffusionPipeline - INFO - Bắt đầu sinh ảnh với prompt: 'A real beautiful Forest'
+2025-05-15 16:14:08,541 - StableDiffusionPipeline - INFO - Tham số: guidance_scale=10.0, steps=55, kích thước=512x512
+2025-05-15 16:14:08,541 - StableDiffusionPipeline - INFO - Sử dụng seed ngẫu nhiên
+2025-05-15 16:14:08,541 - StableDiffusionPipeline - INFO - Đang thực hiện quá trình sinh ảnh...
+2025-05-15 16:14:11,372 - StableDiffusionPipeline - INFO - Đã sinh ảnh thành công
+2025-05-15 16:14:11,450 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_A_real_beautiful_Forest_g10.0_s55.png
+2025-05-15 16:14:11,464 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!

@@ -1,0 +1,7 @@
+Thời gian: 2025-05-15 16:20:37
+Prompt: future city view
+Kích thước: 512x512
+Guidance scale: 8.0
+Số bước: 50
+Seed: None
+File đầu ra: custom-outputs/custom_output_future_city_view_g8.0_s50.png

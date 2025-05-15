@@ -15,27 +15,47 @@ from transformers import CLIPTextModel, CLIPTokenizer
 from PIL import Image
 import argparse
 from tqdm.auto import tqdm
+import logging
+import os
+import re
+from datetime import datetime
+
+# Thiết lập logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("custom_pipeline.log"),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger("StableDiffusion")
 
 def create_custom_pipeline(device="cuda"):
     """
     Lắp ráp các thành phần của Stable Diffusion thành một pipeline tùy chỉnh
     """
-    print("Đang tải các thành phần của Stable Diffusion...")
+    logger.info("Đang tải các thành phần của Stable Diffusion...")
     
     # 1. Tải mô hình VAE để mã hóa/giải mã biểu diễn tiềm ẩn
-    vae = AutoencoderKL.from_pretrained("CompVis/stable-diffusion-v1-4", subfolder="vae")
+    logger.info("Tải VAE model...")
+    vae = AutoencoderKL.from_pretrained("runwayml/stable-diffusion-v1-5", subfolder="vae")
     
     # 2. Tải tokenizer và text encoder để mã hóa văn bản
+    logger.info("Tải CLIP tokenizer và text encoder...")
     tokenizer = CLIPTokenizer.from_pretrained("openai/clip-vit-large-patch14")
     text_encoder = CLIPTextModel.from_pretrained("openai/clip-vit-large-patch14")
     
     # 3. Tải mô hình UNet để tạo biểu diễn tiềm ẩn của ảnh
-    unet = UNet2DConditionModel.from_pretrained("CompVis/stable-diffusion-v1-4", subfolder="unet")
+    logger.info("Tải UNet model...")
+    unet = UNet2DConditionModel.from_pretrained("runwayml/stable-diffusion-v1-5", subfolder="unet")
     
     # 4. Tải scheduler - ở đây chúng ta sử dụng LMS thay vì PNDM mặc định
-    scheduler = LMSDiscreteScheduler.from_pretrained("CompVis/stable-diffusion-v1-4", subfolder="scheduler")
+    logger.info("Tải LMS scheduler...")
+    scheduler = LMSDiscreteScheduler.from_pretrained("runwayml/stable-diffusion-v1-5", subfolder="scheduler")
     
     # Chuyển các mô hình đến thiết bị
+    logger.info(f"Chuyển các mô hình đến thiết bị: {device}")
     vae = vae.to(device)
     text_encoder = text_encoder.to(device)
     unet = unet.to(device)
@@ -46,12 +66,17 @@ def create_latents(prompt, tokenizer, text_encoder, unet, height, width, batch_s
     """
     Tạo text embeddings và latents ban đầu
     """
+    logger.info(f"Tạo latents với seed: {seed if seed is not None else 'random'}")
+    
     if seed is not None:
         generator = torch.Generator(device=device).manual_seed(seed)
+        logger.info(f"Đã thiết lập seed: {seed}")
     else:
         generator = torch.Generator(device=device)
+        logger.info("Sử dụng seed ngẫu nhiên")
     
     # Tạo text embeddings
+    logger.info("Tokenizing prompt...")
     text_input = tokenizer(
         prompt, 
         padding="max_length", 
@@ -60,10 +85,12 @@ def create_latents(prompt, tokenizer, text_encoder, unet, height, width, batch_s
         return_tensors="pt"
     )
     
+    logger.info("Tạo text embeddings...")
     with torch.no_grad():
         text_embeddings = text_encoder(text_input.input_ids.to(device))[0]
     
     # Tạo unconditional embeddings cho classifier-free guidance
+    logger.info("Tạo unconditional embeddings...")
     max_length = text_input.input_ids.shape[-1]
     uncond_input = tokenizer(
         [""] * batch_size, 
@@ -79,11 +106,12 @@ def create_latents(prompt, tokenizer, text_encoder, unet, height, width, batch_s
     text_embeddings = torch.cat([uncond_embeddings, text_embeddings])
     
     # Tạo latents ngẫu nhiên ban đầu
+    logger.info(f"Tạo latents với kích thước: {batch_size}x{unet.in_channels}x{height // 8}x{width // 8}")
     latents = torch.randn(
         (batch_size, unet.in_channels, height // 8, width // 8),
-        generator=generator
+        generator=generator,
+        device=device  # Specify the device when creating the tensor
     )
-    latents = latents.to(device)
     
     return latents, text_embeddings, generator
 
@@ -105,6 +133,13 @@ def generate_image(
     """
     Tạo ảnh từ prompt sử dụng pipeline tùy chỉnh
     """
+    logger.info(f"Bắt đầu quá trình tạo ảnh với tham số:")
+    logger.info(f"- Prompt: '{prompt}'")
+    logger.info(f"- Kích thước: {width}x{height}")
+    logger.info(f"- Guidance scale: {guidance_scale}")
+    logger.info(f"- Số bước: {num_inference_steps}")
+    logger.info(f"- Device: {device}")
+    
     # 1. Tạo text embeddings và latents ban đầu
     latents, text_embeddings, generator = create_latents(
         prompt, tokenizer, text_encoder, unet, 
@@ -112,13 +147,14 @@ def generate_image(
     )
     
     # 2. Cài đặt scheduler với số bước suy luận
+    logger.info(f"Cài đặt scheduler với {num_inference_steps} bước")
     scheduler.set_timesteps(num_inference_steps)
     
     # 3. Chuẩn bị latents cho quá trình khử nhiễu
     latents = latents * scheduler.init_noise_sigma
     
     # 4. Vòng lặp khử nhiễu
-    print(f"Đang sinh ảnh từ mô tả: '{prompt}'")
+    logger.info(f"Bắt đầu quá trình khử nhiễu...")
     for t in tqdm(scheduler.timesteps):
         # Nhân đôi latents cho classifier-free guidance
         latent_model_input = torch.cat([latents] * 2)
@@ -142,6 +178,7 @@ def generate_image(
         latents = scheduler.step(noise_pred, t, latents).prev_sample
     
     # 5. Scale và giải mã biểu diễn tiềm ẩn
+    logger.info("Giải mã latents thành ảnh...")
     latents = 1 / 0.18215 * latents
     
     with torch.no_grad():
@@ -152,6 +189,7 @@ def generate_image(
     image = image.detach().cpu().permute(0, 2, 3, 1).numpy()
     images = (image * 255).round().astype("uint8")
     pil_images = [Image.fromarray(image) for image in images]
+    logger.info("Đã chuyển đổi thành công tensor thành ảnh PIL")
     
     return pil_images
 
@@ -170,7 +208,7 @@ def main():
                        help="Guidance scale")
     parser.add_argument("--seed", type=int, default=None,
                        help="Seed ngẫu nhiên để tái tạo ảnh")
-    parser.add_argument("--output", type=str, default="custom_output.png",
+    parser.add_argument("--output", type=str, default="custom-outputs/custom_output.png",
                        help="Tên file kết quả")
     
     args = parser.parse_args()
@@ -178,7 +216,7 @@ def main():
     # Xác định thiết bị
     device = "cuda" if torch.cuda.is_available() else "cpu"
     if device == "cpu":
-        print("Cảnh báo: Bạn đang sử dụng CPU, quá trình sinh ảnh sẽ rất chậm!")
+        logger.warning("Cảnh báo: Bạn đang sử dụng CPU, quá trình sinh ảnh sẽ rất chậm!")
     
     # Tạo pipeline tùy chỉnh
     vae, text_encoder, tokenizer, unet, scheduler = create_custom_pipeline(device)
@@ -199,11 +237,41 @@ def main():
         device=device
     )
     
+    # Tạo tên file kết quả với prompt, guidance và steps
+    output_dir = os.path.dirname(args.output)
+    if output_dir and not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+        logger.info(f"Đã tạo thư mục đầu ra: {output_dir}")
+    
+    # Xử lý prompt để đưa vào tên file
+    safe_prompt = re.sub(r'[^\w\s-]', '', args.prompt)  # Loại bỏ ký tự đặc biệt
+    safe_prompt = re.sub(r'\s+', '_', safe_prompt.strip())  # Thay khoảng trắng bằng gạch dưới
+    safe_prompt = safe_prompt[:30]  # Giới hạn độ dài
+    
+    filename = os.path.basename(args.output)
+    name, ext = os.path.splitext(filename)
+    
+    # Tạo tên file mới với prompt, guidance và steps
+    new_filename = f"{name}_{safe_prompt}_g{args.guidance}_s{args.steps}{ext}"
+    output_path = os.path.join(output_dir, new_filename)
+    
     # Lưu ảnh
-    output_path = args.output
     images[0].save(output_path)
-    print(f"Đã lưu ảnh tại: {output_path}")
+    logger.info(f"Đã lưu ảnh tại: {output_path}")
+    
+    # Lưu thông tin sinh ảnh vào file log
+    log_file = os.path.join(output_dir, f"{name}_{safe_prompt}_log.txt")
+    with open(log_file, "w", encoding="utf-8") as f:
+        f.write(f"Thời gian: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write(f"Prompt: {args.prompt}\n")
+        f.write(f"Kích thước: {args.width}x{args.height}\n")
+        f.write(f"Guidance scale: {args.guidance}\n")
+        f.write(f"Số bước: {args.steps}\n")
+        f.write(f"Seed: {args.seed}\n")
+        f.write(f"File đầu ra: {output_path}\n")
+    logger.info(f"Đã lưu thông tin log vào: {log_file}")
 
 if __name__ == "__main__":
+    logger.info("Khởi động pipeline...")
     main()
-    print("Hoàn thành!") 
+    logger.info("Hoàn thành!")

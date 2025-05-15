@@ -1,0 +1,7 @@
+Thời gian: 2025-05-15 16:23:14
+Prompt: future city with many mentities
+Kích thước: 1024x512
+Guidance scale: 10.0
+Số bước: 50
+Seed: None
+File đầu ra: custom-outputs/custom_output_future_city_with_many_mentitie_g10.0_s50.png
