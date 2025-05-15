@@ -47,6 +47,7 @@
 2025-05-15 13:13:30,025 - StableDiffusion - INFO - Giải mã latents thành ảnh...
 2025-05-15 13:13:30,121 - StableDiffusion - INFO - Đã chuyển đổi thành công tensor thành ảnh PIL
 2025-05-15 13:13:30,192 - StableDiffusion - INFO - Đã lưu ảnh tại: outputs/custom_output_g6.0_s50.png
+<<<<<<< HEAD
 2025-05-15 13:13:30,197 - StableDiffusion - INFO - Hoàn thành!2025-05-15 16:16:02,706 - StableDiffusion - INFO - Khởi động pipeline...
 2025-05-15 16:16:03,000 - StableDiffusion - INFO - Đang tải các thành phần của Stable Diffusion...
 2025-05-15 16:16:03,000 - StableDiffusion - INFO - Tải VAE model...
@@ -260,3 +261,6 @@
 2025-05-15 16:25:20,581 - StableDiffusion - INFO - Đã lưu ảnh tại: custom-outputs/custom_output_future_city_with_many_people_a_g10.0_s50.png
 2025-05-15 16:25:20,582 - StableDiffusion - INFO - Đã lưu thông tin log vào: custom-outputs/custom_output_future_city_with_many_people_a_log.txt
 2025-05-15 16:25:20,615 - StableDiffusion - INFO - Hoàn thành!
+=======
+2025-05-15 13:13:30,197 - StableDiffusion - INFO - Hoàn thành!
+>>>>>>> bfc478e580e5ccd3e6f39011a0491527b823ca07

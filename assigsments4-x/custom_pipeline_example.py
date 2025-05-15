@@ -3,10 +3,11 @@
 
 """
 Ví dụ về cách lắp ráp một pipeline suy luận Stable Diffusion từ các thành phần riêng biệt:
-- VAE (Variational Autoencoder)
-- UNet
-- CLIP Text Encoder
-- Scheduler
+VAE (Variational Autoencoder)
+UNet
+CLIP Text Encoder
+Scheduler
+
 """
 
 import torch
@@ -17,10 +18,6 @@ import argparse
 from tqdm.auto import tqdm
 import logging
 import os
-<<<<<<< HEAD
-import re
-=======
->>>>>>> bfc478e580e5ccd3e6f39011a0491527b823ca07
 from datetime import datetime
 
 # Thiết lập logging
@@ -42,11 +39,7 @@ def create_custom_pipeline(device="cuda"):
     
     # 1. Tải mô hình VAE để mã hóa/giải mã biểu diễn tiềm ẩn
     logger.info("Tải VAE model...")
-<<<<<<< HEAD
-    vae = AutoencoderKL.from_pretrained("runwayml/stable-diffusion-v1-5", subfolder="vae")
-=======
     vae = AutoencoderKL.from_pretrained("CompVis/stable-diffusion-v1-4", subfolder="vae")
->>>>>>> bfc478e580e5ccd3e6f39011a0491527b823ca07
     
     # 2. Tải tokenizer và text encoder để mã hóa văn bản
     logger.info("Tải CLIP tokenizer và text encoder...")
@@ -55,19 +48,11 @@ def create_custom_pipeline(device="cuda"):
     
     # 3. Tải mô hình UNet để tạo biểu diễn tiềm ẩn của ảnh
     logger.info("Tải UNet model...")
-<<<<<<< HEAD
-    unet = UNet2DConditionModel.from_pretrained("runwayml/stable-diffusion-v1-5", subfolder="unet")
-    
-    # 4. Tải scheduler - ở đây chúng ta sử dụng LMS thay vì PNDM mặc định
-    logger.info("Tải LMS scheduler...")
-    scheduler = LMSDiscreteScheduler.from_pretrained("runwayml/stable-diffusion-v1-5", subfolder="scheduler")
-=======
     unet = UNet2DConditionModel.from_pretrained("CompVis/stable-diffusion-v1-4", subfolder="unet")
     
     # 4. Tải scheduler - ở đây chúng ta sử dụng LMS thay vì PNDM mặc định
     logger.info("Tải LMS scheduler...")
     scheduler = LMSDiscreteScheduler.from_pretrained("CompVis/stable-diffusion-v1-4", subfolder="scheduler")
->>>>>>> bfc478e580e5ccd3e6f39011a0491527b823ca07
     
     # Chuyển các mô hình đến thiết bị
     logger.info(f"Chuyển các mô hình đến thiết bị: {device}")
@@ -123,7 +108,7 @@ def create_latents(prompt, tokenizer, text_encoder, unet, height, width, batch_s
     # Tạo latents ngẫu nhiên ban đầu
     logger.info(f"Tạo latents với kích thước: {batch_size}x{unet.in_channels}x{height // 8}x{width // 8}")
     latents = torch.randn(
-        (batch_size, unet.in_channels, height // 8, width // 8),
+        batch_size, unet.in_channels, height // 8, width // 😎,
         generator=generator,
         device=device  # Specify the device when creating the tensor
     )
@@ -223,11 +208,7 @@ def main():
                        help="Guidance scale")
     parser.add_argument("--seed", type=int, default=None,
                        help="Seed ngẫu nhiên để tái tạo ảnh")
-<<<<<<< HEAD
-    parser.add_argument("--output", type=str, default="custom-outputs/custom_output.png",
-=======
     parser.add_argument("--output", type=str, default="outputs/custom_output.png",
->>>>>>> bfc478e580e5ccd3e6f39011a0491527b823ca07
                        help="Tên file kết quả")
     
     args = parser.parse_args()
@@ -256,56 +237,24 @@ def main():
         device=device
     )
     
-<<<<<<< HEAD
-    # Tạo tên file kết quả với prompt, guidance và steps
-=======
     # Tạo tên file kết quả với guidance và steps
->>>>>>> bfc478e580e5ccd3e6f39011a0491527b823ca07
     output_dir = os.path.dirname(args.output)
     if output_dir and not os.path.exists(output_dir):
         os.makedirs(output_dir)
         logger.info(f"Đã tạo thư mục đầu ra: {output_dir}")
     
-<<<<<<< HEAD
-    # Xử lý prompt để đưa vào tên file
-    safe_prompt = re.sub(r'[^\w\s-]', '', args.prompt)  # Loại bỏ ký tự đặc biệt
-    safe_prompt = re.sub(r'\s+', '_', safe_prompt.strip())  # Thay khoảng trắng bằng gạch dưới
-    safe_prompt = safe_prompt[:30]  # Giới hạn độ dài
-    
-    filename = os.path.basename(args.output)
-    name, ext = os.path.splitext(filename)
-    
-    # Tạo tên file mới với prompt, guidance và steps
-    new_filename = f"{name}_{safe_prompt}_g{args.guidance}_s{args.steps}{ext}"
-=======
     filename = os.path.basename(args.output)
     name, ext = os.path.splitext(filename)
     
     # Tạo tên file mới với guidance và steps
     new_filename = f"{name}_g{args.guidance}_s{args.steps}{ext}"
->>>>>>> bfc478e580e5ccd3e6f39011a0491527b823ca07
     output_path = os.path.join(output_dir, new_filename)
     
     # Lưu ảnh
     images[0].save(output_path)
     logger.info(f"Đã lưu ảnh tại: {output_path}")
-<<<<<<< HEAD
-    
-    # Lưu thông tin sinh ảnh vào file log
-    log_file = os.path.join(output_dir, f"{name}_{safe_prompt}_log.txt")
-    with open(log_file, "w", encoding="utf-8") as f:
-        f.write(f"Thời gian: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-        f.write(f"Prompt: {args.prompt}\n")
-        f.write(f"Kích thước: {args.width}x{args.height}\n")
-        f.write(f"Guidance scale: {args.guidance}\n")
-        f.write(f"Số bước: {args.steps}\n")
-        f.write(f"Seed: {args.seed}\n")
-        f.write(f"File đầu ra: {output_path}\n")
-    logger.info(f"Đã lưu thông tin log vào: {log_file}")
-=======
->>>>>>> bfc478e580e5ccd3e6f39011a0491527b823ca07
 
-if __name__ == "__main__":
+if _name_ == "_main_":
     logger.info("Khởi động pipeline...")
     main()
     logger.info("Hoàn thành!")

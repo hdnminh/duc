@@ -11,6 +11,7 @@
 2025-05-15 13:14:36,528 - StableDiffusionPipeline - INFO - Đang thực hiện quá trình sinh ảnh...
 2025-05-15 13:14:38,273 - StableDiffusionPipeline - INFO - Đã sinh ảnh thành công
 2025-05-15 13:14:38,354 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_g7.5_s50.png
+<<<<<<< HEAD
 2025-05-15 13:14:38,361 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!2025-05-15 15:58:13,337 - StableDiffusionPipeline - INFO - Bắt đầu chương trình Stable Diffusion
 2025-05-15 15:58:13,338 - StableDiffusionPipeline - INFO - Tham số: Namespace(prompt='cảnh biển với hoàng hôn đẹp', num=1, guidance=7.5, steps=50, height=512, width=512, seed=None, output='outputs')
 2025-05-15 15:58:13,338 - StableDiffusionPipeline - INFO - Đang tải mô hình Stable Diffusion...
@@ -294,3 +295,6 @@
 2025-05-15 16:14:11,372 - StableDiffusionPipeline - INFO - Đã sinh ảnh thành công
 2025-05-15 16:14:11,450 - StableDiffusionPipeline - INFO - Đã lưu ảnh tại: outputs/result_A_real_beautiful_Forest_g10.0_s55.png
 2025-05-15 16:14:11,464 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+=======
+2025-05-15 13:14:38,361 - StableDiffusionPipeline - INFO - Chương trình hoàn thành thành công!
+>>>>>>> bfc478e580e5ccd3e6f39011a0491527b823ca07

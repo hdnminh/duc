@@ -18,7 +18,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("stable_diffusion_pipeline.log"),
+        logging.FileHandler("stable_diffusion_pipeline_log.log"),
         logging.StreamHandler()
     ]
 )
@@ -57,7 +57,7 @@ def setup_pipeline():
     # Tải pipeline
     logger.info("Tải StableDiffusionPipeline từ CompVis/stable-diffusion-v1-4...")
     pipe = StableDiffusionPipeline.from_pretrained(
-        "runwayml/stable-diffusion-v1-5", 
+        "CompVis/stable-diffusion-v1-4", 
         torch_dtype=torch_dtype
     )
     pipe = pipe.to(device)
@@ -149,9 +149,9 @@ def main():
     parser.add_argument("--steps", type=int, default=50,
                         help="Số bước khử nhiễu")
     parser.add_argument("--height", type=int, default=512,
-                        help="Chiều cao ảnh (nên là bội số của 8)")
+                        help="Chiều cao ảnh (nên là bội số của 😎")
     parser.add_argument("--width", type=int, default=512,
-                        help="Chiều rộng ảnh (nên là bội số của 8)")
+                        help="Chiều rộng ảnh (nên là bội số của 😎")
     parser.add_argument("--seed", type=int, default=None,
                         help="Seed ngẫu nhiên để tái tạo ảnh")
     parser.add_argument("--output", type=str, default="outputs",
@@ -221,11 +221,10 @@ def main():
                 steps=args.steps
             )
 
-if __name__ == "__main__":
+if _name_ == "_main_":
     try:
         main()
         logger.info("Chương trình hoàn thành thành công!")
     except Exception as e:
         logger.exception("Có lỗi xảy ra trong quá trình thực thi:")
     print("Hoàn thành!")
-    
